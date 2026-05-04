@@ -14,8 +14,11 @@ const FloatingWhatsApp = () => {
   };
 
   return (
-    <motion.button
-      onClick={handleClick}
+    <motion.a
+      id="floating-whatsapp-button"
+      href={`${siteConfig.links.whatsapp}&text=${encodeURIComponent('Halo Bebas Mampet Sedot WC')}`}
+      target="_blank"
+      rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.3 }}
@@ -32,7 +35,7 @@ const FloatingWhatsApp = () => {
         className="h-full w-full object-cover"
         priority
       />
-    </motion.button>
+    </motion.a>
   );
 };
 

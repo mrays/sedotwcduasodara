@@ -264,12 +264,15 @@ const Services = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex justify-center mt-4"
         >
-          <button 
+          <a 
+            id="services-cta-button"
+            href={`${siteConfig.links.whatsapp}&text=${encodeURIComponent('Halo, saya ingin mengetahui lebih lanjut tentang layanan sedot WC')}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-blue-700 border-2 border-blue-200 hover:border-blue-700 hover:bg-blue-50 px-10 py-4 rounded-full font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/20"
-            onClick={handleWhatsApp}
           >
             Lihat Semua Layanan &rarr;
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

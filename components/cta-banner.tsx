@@ -34,23 +34,24 @@ const CTABanner = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button
-              size="lg"
-              className="bg-green-600 text-white hover:bg-green-700 font-semibold cursor-pointer gap-2"
-              onClick={handleWhatsApp}
+            <a
+              id="cta-whatsapp-button"
+              href={siteConfig.links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-11 px-8 bg-green-600 text-white hover:bg-green-700 rounded-md font-semibold cursor-pointer gap-2 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
               Chat WhatsApp
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-green-600 text-green-700 hover:bg-green-50 font-semibold cursor-pointer gap-2"
-              onClick={() => window.location.href = `tel:${siteConfig.phone}`}
+            </a>
+            <a
+              id="cta-call-button"
+              href={`tel:${siteConfig.phone}`}
+              className="inline-flex items-center justify-center h-11 px-8 border border-green-600 text-green-700 hover:bg-green-50 rounded-md font-semibold cursor-pointer gap-2 transition-colors"
             >
               <Phone className="w-5 h-5" />
               Hubungi {siteConfig.phone}
-            </Button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

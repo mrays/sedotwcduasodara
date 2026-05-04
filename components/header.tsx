@@ -123,9 +123,15 @@ const Header = () => {
                 ></span>
               </motion.button>
             ))}
-            <Button variant="default" className="bg-green-600 hover:bg-green-700">
+            <a 
+              id="header-cta-button"
+              href={siteConfig.links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-10 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md font-medium transition-colors"
+            >
               Hubungi Kami
-            </Button>
+            </a>
           </nav>
 
           {/* Mobile Navigation */}
@@ -153,9 +159,16 @@ const Header = () => {
                     </Button>
                   ))}
                   <div className="pt-4">
-                    <Button className="w-full bg-green-600 hover:bg-green-700" onClick={() => setIsOpen(false)}>
+                    <a 
+                      id="mobile-header-cta-button"
+                      href={siteConfig.links.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center h-10 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md font-medium transition-colors text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
                       Hubungi Kami
-                    </Button>
+                    </a>
                   </div>
                 </nav>
               </DrawerContent>
