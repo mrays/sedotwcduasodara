@@ -62,8 +62,8 @@ const FAQSedotWC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-white dark:bg-black">
-      <div className="container mx-auto px-6 max-w-4xl">
+    <section id="faq" className="py-14 sm:py-20 lg:py-32 bg-white dark:bg-black">
+      <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ const FAQSedotWC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 lg:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Pertanyaan yang Sering Diajukan
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -92,7 +92,7 @@ const FAQSedotWC = () => {
               <motion.div key={idx} variants={item}>
                 <AccordionItem
                   value={`item-${idx}`}
-                  className="border border-gray-200 dark:border-zinc-800 rounded-lg px-6 bg-gray-50 dark:bg-zinc-900 transition-all hover:shadow-md"
+                  className="border border-gray-200 dark:border-zinc-800 rounded-lg px-4 sm:px-6 bg-gray-50 dark:bg-zinc-900 transition-all hover:shadow-md"
                 >
                   <AccordionTrigger className="py-4 text-left text-base font-semibold text-foreground hover:text-green-600 dark:hover:text-green-400">
                     {faq.question}

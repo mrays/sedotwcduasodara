@@ -95,7 +95,7 @@ const Header = () => {
         isScrolled ? 'bg-background/60 backdrop-blur-sm shadow-xs' : 'bg-transparent'
       )}
     >
-      <div className={cn("container mx-auto px-6 py-4 flex items-center justify-between")}  >
+      <div className={cn("container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between")}  >
         <Logo />
         
         <div className="flex items-center gap-2.5">

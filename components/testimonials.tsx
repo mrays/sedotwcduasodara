@@ -8,7 +8,7 @@ const testimonials = [
     name: 'Andi Pratama',
     location: 'Jakarta',
     quote: '"Pelayanan cepat, petugas ramah dan hasilnya bersih, WC langsung lancar tanpa bau. Recommended!"',
-    avatar: '/avatars/300-1.png',
+    avatar: '/avatars/avatar_andi.png',
     stars: 5,
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
     name: 'Siti Aisyah',
     location: 'Bekasi',
     quote: '"Sudah langganan di sini, selalu on time dan harganya terjangkau. Mantap!"',
-    avatar: '/avatars/300-2.png',
+    avatar: '/avatars/avatar_siti.png',
     stars: 5,
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
     name: 'Budi Santoso',
     location: 'Tangerang',
     quote: '"Armada lengkap dan tenaga kerja profesional. Untuk proyek besar sangat membantu."',
-    avatar: '/avatars/300-3.png',
+    avatar: '/avatars/avatar_budi.png',
     stars: 5,
   },
 ];
@@ -51,8 +51,8 @@ const item: Variants = {
 
 export default function Testimonials() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-14 sm:py-20 lg:py-28 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function Testimonials() {
           <span className="text-sm font-extrabold text-blue-700 tracking-[0.15em] uppercase">
             TESTIMONI
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
             Apa Kata Pelanggan Kami?
           </h2>
         </motion.div>
@@ -81,7 +81,7 @@ export default function Testimonials() {
             <motion.div
               key={testimonial.id}
               variants={item}
-              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col gap-6 hover:-translate-y-2 transition-transform duration-300"
+              className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col gap-5 sm:gap-6 hover:-translate-y-2 transition-transform duration-300"
             >
               {/* Stars */}
               <div className="flex gap-1.5">

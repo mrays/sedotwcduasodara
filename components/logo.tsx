@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const Logo = () => {
-  const logoSrc = '/logo-sedotwc.png';
+  const logoSrc = '/logobebasmampet.png';
 
   return (
     <div className="flex items-center gap-3 leading-0">

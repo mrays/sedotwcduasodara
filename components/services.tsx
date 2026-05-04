@@ -204,8 +204,8 @@ const Services = () => {
   };
 
   return (
-    <section id="layanan" className="py-20 lg:py-28 bg-slate-50">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="layanan" className="py-14 sm:py-20 lg:py-28 bg-slate-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -231,24 +231,24 @@ const Services = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"
         >
           {services.map((service) => (
             <motion.div 
               key={service.id} 
               variants={item} 
-              className="bg-white rounded-3xl p-8 lg:p-10 text-center border border-slate-100 flex flex-col items-center gap-5 shadow-sm hover:shadow-2xl hover:shadow-blue-600/10 hover:border-blue-200 transition-all duration-300 group cursor-pointer"
+              className="bg-white rounded-3xl p-5 sm:p-8 lg:p-10 text-center border border-slate-100 flex flex-col items-center gap-3 sm:gap-5 shadow-sm hover:shadow-2xl hover:shadow-blue-600/10 hover:border-blue-200 transition-all duration-300 group cursor-pointer"
             >
-              <div className="w-full max-w-[140px] aspect-square flex items-center justify-center mb-2">
+              <div className="w-full max-w-[100px] sm:max-w-[140px] aspect-square flex items-center justify-center mb-1 sm:mb-2">
                 <div className="w-full h-full transform transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
                   {service.icon}
                 </div>
               </div>
-              <div className="flex flex-col items-center gap-3">
-                <h3 className="text-xl font-extrabold text-slate-900 leading-snug">
+              <div className="flex flex-col items-center gap-2 sm:gap-3">
+                <h3 className="text-base sm:text-xl font-extrabold text-slate-900 leading-snug">
                   {service.title}
                 </h3>
-                <p className="text-sm lg:text-base text-slate-500 font-medium leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-slate-500 font-medium leading-relaxed">
                   {service.description}
                 </p>
               </div>

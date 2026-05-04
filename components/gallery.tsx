@@ -59,8 +59,8 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-slate-50">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-14 sm:py-20 lg:py-28 bg-slate-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,13 +86,13 @@ const Gallery = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {galleryImages.map((image) => (
             <motion.div
               key={image.id}
               variants={item}
-              className="group relative overflow-hidden rounded-2xl h-64 cursor-pointer shadow-sm hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl h-52 sm:h-64 cursor-pointer shadow-sm hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300"
             >
               <img
                 src={image.src}

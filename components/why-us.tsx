@@ -51,8 +51,8 @@ const Features = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-white dark:bg-black">
-      <div className="container mx-auto px-6">
+    <section className="py-14 sm:py-20 lg:py-32 bg-white dark:bg-black">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 lg:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Keunggulan Kami
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ const Features = () => {
             const Icon = feature.icon;
             return (
               <motion.div key={idx} variants={item}>
-                <Card className="p-8 h-full hover:shadow-lg transition-shadow duration-300 bg-gray-50 dark:bg-zinc-900 border-0">
+                <Card className="p-6 sm:p-8 h-full hover:shadow-lg transition-shadow duration-300 bg-gray-50 dark:bg-zinc-900 border-0">
                   <div className="mb-6 inline-flex p-3 bg-green-100 dark:bg-green-900/30 rounded-lg">
                     <Icon className="w-7 h-7 text-green-600 dark:text-green-400" />
                   </div>

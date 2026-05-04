@@ -48,22 +48,22 @@ const Stats = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-white border-y border-slate-200">
-      <div className="container mx-auto px-6">
+    <section className="py-10 sm:py-16 lg:py-24 bg-white border-y border-slate-200">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 lg:gap-12"
         >
           {stats.map((stat, idx) => (
             <motion.div key={idx} variants={item} className="text-center">
               <div className="mb-2">
-                <span className="text-4xl lg:text-5xl font-bold text-slate-900">
+                <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900">
                   {stat.number}
                 </span>
-                <span className="text-2xl lg:text-3xl font-bold text-green-600 ml-1">
+                <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600 ml-1">
                   {stat.suffix}
                 </span>
               </div>

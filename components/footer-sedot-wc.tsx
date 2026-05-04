@@ -17,7 +17,7 @@ const FooterSedotWC = () => {
   return (
     <footer className="bg-white relative overflow-hidden text-slate-700 border-t border-slate-200">
       {/* Top Section */}
-      <div className="container px-6 mx-auto pt-14 pb-6 border-b border-slate-200">
+      <div className="container px-4 sm:px-6 mx-auto pt-14 pb-6 border-b border-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and description */}
           <motion.div

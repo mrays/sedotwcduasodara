@@ -87,8 +87,8 @@ const ContactSedotWC = () => {
   ];
 
   return (
-    <section id="kontak" className="py-20 lg:py-32 bg-gradient-to-b from-white dark:from-black to-gray-50 dark:to-zinc-950">
-      <div className="container mx-auto px-6">
+    <section id="kontak" className="py-14 sm:py-20 lg:py-32 bg-gradient-to-b from-white dark:from-black to-gray-50 dark:to-zinc-950">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -97,11 +97,10 @@ const ContactSedotWC = () => {
           viewport={{ once: true }}
           className="text-center mb-16 lg:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Hubungi Kami
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight"> Hubungi Kami
           </h2>
           
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Ada pertanyaan atau ingin menggunakan layanan kami? Hubungi kami sekarang juga dan tim profesional kami siap membantu Anda.
           </p>
         </motion.div>
@@ -123,7 +122,7 @@ const ContactSedotWC = () => {
                   whileHover={{ x: 10 }}
                   className="group"
                 >
-                  <Card className="p-6 bg-gray-50 dark:bg-zinc-900 border-0 hover:shadow-lg transition-shadow cursor-pointer" onClick={info.action}>
+                  <Card className="p-4 sm:p-6 bg-gray-50 dark:bg-zinc-900 border-0 hover:shadow-lg transition-shadow cursor-pointer" onClick={info.action}>
                     <div className="flex gap-4">
                       <div className="flex-shrink-0">
                         <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-green-100 dark:bg-green-900/30 group-hover:bg-green-200 dark:group-hover:bg-green-900/50 transition-colors">
@@ -152,7 +151,7 @@ const ContactSedotWC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
+            <Card className="p-5 sm:p-8 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800">
               <form onSubmit={onSubmit} className="space-y-6">
                 {/* Name */}
                 <div>

@@ -11,8 +11,8 @@ const CTABanner = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-r from-green-50 via-white to-green-50 border-y border-green-100">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-green-50 via-white to-green-50 border-y border-green-100">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,10 +20,10 @@ const CTABanner = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
             Butuh Sedot WC Sekarang?
           </h2>
-          <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Hubungi kami sekarang juga dan dapatkan layanan profesional dalam waktu singkat. Tim kami siap melayani Anda 24/7.
           </p>
 
@@ -32,14 +32,14 @@ const CTABanner = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full"
           >
             <a
               id="cta-whatsapp-button"
               href={siteConfig.links.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-11 px-8 bg-green-600 text-white hover:bg-green-700 rounded-md font-semibold cursor-pointer gap-2 transition-colors"
+              className="inline-flex items-center justify-center h-11 w-full sm:w-auto px-8 bg-green-600 text-white hover:bg-green-700 rounded-md font-semibold cursor-pointer gap-2 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
               Chat WhatsApp
@@ -47,7 +47,7 @@ const CTABanner = () => {
             <a
               id="cta-call-button"
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center h-11 px-8 border border-green-600 text-green-700 hover:bg-green-50 rounded-md font-semibold cursor-pointer gap-2 transition-colors"
+              className="inline-flex items-center justify-center h-11 w-full sm:w-auto px-8 border border-green-600 text-green-700 hover:bg-green-50 rounded-md font-semibold cursor-pointer gap-2 transition-colors"
             >
               <Phone className="w-5 h-5" />
               Hubungi {siteConfig.phone}

@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
   description: 'Layanan penyedotan WC profesional, cepat, dan terpercaya 24 jam. Bersih, Cepat, Profesional. Hubungi kami di 087784003407',
   keywords: 'sedot WC, sedot limbah, sedot lumpur, cuci tangki air, layanan WC Pontianak',
+  icons: {
+    icon: '/logobebasmampet.png',
+  },
   openGraph: {
     title: 'Sedot WC Bebas Mampet',
     description: 'Layanan penyedotan WC profesional 24 jam',
@@ -42,7 +45,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
       <body
         className={cn(
-          'antialiased text-base text-foreground bg-background',
+          'antialiased text-base text-foreground bg-background overflow-x-hidden',
           inter.className,
         )}
       >
