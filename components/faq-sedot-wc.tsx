@@ -12,7 +12,7 @@ const FAQSedotWC = () => {
     },
     {
       question: 'Bagaimana cara menghubungi Anda?',
-      answer: 'Anda dapat menghubungi kami melalui WhatsApp, telepon, atau mengisi formulir kontak di website. Nomor kami adalah 085691135601.',
+      answer: 'Anda dapat menghubungi kami melalui WhatsApp, telepon, atau mengisi formulir kontak di website. Nomor kami adalah 087784003407.',
     },
     {
       question: 'Berapa harga layanan sedot WC?',

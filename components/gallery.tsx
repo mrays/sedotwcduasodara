@@ -7,32 +7,32 @@ const Gallery = () => {
     {
       id: 1,
       title: 'Pekerjaan Sedot WC',
-      src: '/galeri/gallery1.jpeg',
+      src: 'https://file.buatweb.cloud/supendi/imgfarisa/swc.jpeg',
     },
     {
       id: 2,
       title: 'Armada Kami',
-      src: '/galeri/gallery2.jpeg',
+      src: 'https://file.buatweb.cloud/supendi/imgfarisa/swc1%20(1).jpg',
     },
     {
       id: 3,
       title: 'Perbaikan Saluran',
-      src: '/galeri/gallery3.jpeg',
+      src: 'https://file.buatweb.cloud/supendi/imgfarisa/swc1%20(2).jpg',
     },
     {
       id: 4,
       title: 'Tim Profesional',
-      src: '/galeri/gallery1.jpeg',
+      src: 'https://file.buatweb.cloud/supendi/imgfarisa/swc1%20(3).jpg',
     },
     {
       id: 5,
       title: 'Peralatan Modern',
-      src: '/galeri/gallery2.jpeg',
+      src: 'https://file.buatweb.cloud/supendi/imgfarisa/swc1%20(5).jpeg',
     },
     {
       id: 6,
       title: 'Hasil Kerja Kami',
-      src: '/galeri/gallery3.jpeg',
+      src: 'https://file.buatweb.cloud/supendi/imgfarisa/swc1%20(2).jpeg',
     },
   ];
 
@@ -47,10 +47,11 @@ const Gallery = () => {
   };
 
   const item = {
-    hidden: { opacity: 0, scale: 0.9 },
+    hidden: { opacity: 0, scale: 0.9, y: 20 },
     show: {
       opacity: 1,
       scale: 1,
+      y: 0,
       transition: {
         duration: 0.5,
       },
@@ -58,20 +59,23 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-b from-white dark:from-black to-gray-50 dark:to-zinc-950">
-      <div className="container mx-auto px-6">
+    <section className="py-20 lg:py-28 bg-slate-50">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 lg:mb-20"
+          className="flex flex-col items-center text-center mb-16 gap-3"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <span className="text-sm font-extrabold text-blue-700 tracking-[0.15em] uppercase">
+            GALERI
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
             Galeri Pekerjaan Kami
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl font-medium mt-1">
             Dokumentasi lengkap hasil kerja profesional kami untuk kepercayaan Anda.
           </p>
         </motion.div>
@@ -88,16 +92,16 @@ const Gallery = () => {
             <motion.div
               key={image.id}
               variants={item}
-              className="group relative overflow-hidden rounded-lg h-64 cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl h-64 cursor-pointer shadow-sm hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300"
             >
               <img
                 src={image.src}
                 alt={image.title}
-                className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white font-semibold">{image.title}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <p className="text-white font-bold text-lg">{image.title}</p>
               </div>
             </motion.div>
           ))}
@@ -109,10 +113,10 @@ const Gallery = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-12"
+          className="flex justify-center mt-12"
         >
-          <button className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors">
-            Lihat Semua Galeri
+          <button className="bg-white text-blue-700 border-2 border-blue-200 hover:border-blue-700 hover:bg-blue-50 px-10 py-4 rounded-full font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/20">
+            Lihat Semua Galeri &rarr;
           </button>
         </motion.div>
       </div>

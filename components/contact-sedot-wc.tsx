@@ -38,7 +38,7 @@ const ContactSedotWC = () => {
     setIsSubmitting(true);
 
     const message = [
-      'Halo, saya ingin menggunakan layanan Sedot WC Dua Sodara.',
+      'Halo, saya ingin menggunakan layanan Sedot WC Bebas Mampet.',
       '',
       `Nama: ${formData.name}`,
       `Email: ${formData.email}`,

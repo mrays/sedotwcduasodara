@@ -1,206 +1,135 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Phone, MessageSquare } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { Phone, Clock, Users, Shield } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 const HeroNew = () => {
-  const [mounted, setMounted] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Array gambar slideshow - sesuaikan dengan nama file di folder public/
-  const slides = [
-    '/hero-1.png',
-    '/hero-2.png',
-    '/hero-3.png',
-  ];
-
-  // Auto-slide setiap 5 detik
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Ganti slide setiap 5 detik
-
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
   const handleWhatsApp = () => {
     window.open(
-      `${siteConfig.links.whatsapp}&text=${encodeURIComponent('Saya membutuhkan layanan sedot WC')}`,
+      `${siteConfig.links.whatsapp}&text=${encodeURIComponent('Halo, saya membutuhkan layanan sedot WC')}`,
       '_blank',
       'noopener,noreferrer'
     );
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:085691135601';
-  };
-
-  const scrollToServices = () => {
-    const element = document.getElementById('layanan');
-    element?.scrollIntoView({ behavior: 'smooth' });
+    window.location.href = `tel:${siteConfig.phone}`;
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 lg:pt-32 lg:pb-20 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white">
-      {/* Animated background orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
+    <section className="relative min-h-screen flex items-center pt-24 pb-16 lg:pt-32 lg:pb-24">
+      {/* Background Layer */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/hero-background-baru.png"
+          alt="Armada Sedot WC"
+          aria-hidden="true"
+          className="w-full h-full object-cover object-[75%_center] lg:object-right"
         />
-        <motion.div
-          className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
+        {/* Soft gradient to ensure text readability if the image has dark spots on the left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/90 via-white/50 to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Main headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+      {/* Content overlay */}
+      <div className="container relative z-10 mx-auto px-6 lg:px-12">
+        <div className="max-w-2xl flex flex-col gap-5 lg:gap-6">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight"
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Sedot WC{' '}
-            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-              Dua Sodara
+            <span className="inline-block text-sm lg:text-base font-bold text-blue-600 tracking-wider uppercase">
+              JASA SEDOT WC PROFESIONAL
+            </span>
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-800 leading-[1.15]"
+          >
+            WC Mampet?<br />
+            <span className="text-blue-600 block mt-2">
+              Kami Siap Mengatasi!
             </span>
           </motion.h1>
 
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl md:text-3xl text-slate-700 mb-4"
-          >
-            Bersih, Cepat, Profesional
-          </motion.p>
-
           {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl font-medium mt-2"
           >
-            Kami adalah layanan penyedotan WC profesional terpercaya yang siap melayani kebutuhan Anda 24 jam setiap hari. Dengan tim berpengalaman dan peralatan modern, kami menjamin kepuasan pelanggan 100%.
+            Layanan sedot WC cepat, bersih, dan profesional.
+            Siap melayani 24 jam untuk rumah, kantor, restoran,
+            hingga industri.
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-wrap gap-4 mt-4"
           >
-            <Button
-              size="lg"
-              className="bg-green-600 hover:bg-green-700 text-white font-semibold cursor-pointer gap-2"
+            <button 
+              className="inline-flex items-center justify-center gap-2.5 bg-[#0e5bc5] hover:bg-blue-800 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-blue-600/20 hover:-translate-y-1 text-base min-w-[200px]" 
+              onClick={handleCall}
+            >
+              <Phone className="w-5 h-5 fill-current" />
+              {siteConfig.phone}
+            </button>
+            <button 
+              className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-blue-50 text-[#0e5bc5] border-2 border-blue-200 px-8 py-3.5 rounded-xl font-semibold transition-all hover:-translate-y-1 text-base min-w-[200px]" 
               onClick={handleWhatsApp}
             >
-              <MessageSquare className="w-5 h-5" />
-              Hubungi Sekarang
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-slate-300 text-slate-800 hover:bg-slate-100 font-semibold cursor-pointer gap-2"
-              onClick={scrollToServices}
-            >
-              Lihat Layanan
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Chat WhatsApp
+            </button>
           </motion.div>
 
-          {/* Badge */}
+          {/* Feature Badges - Horizontal Layout */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="inline-flex items-center gap-3 bg-green-500/10 border border-green-500/30 px-6 py-3 rounded-full"
-          >
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-green-700 font-semibold">24 Jam Siap Melayani</span>
-          </motion.div>
-
-          {/* Hero Slideshow */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 sm:mt-14 md:mt-16 relative h-[240px] sm:h-72 md:h-96 lg:h-[500px] w-full rounded-xl sm:rounded-2xl border border-green-100 overflow-hidden shadow-lg bg-white"
-          >
-            {/* Slides */}
-            {slides.map((slide, idx) => (
-              <motion.div
-                key={idx}
-                className="absolute inset-0 p-3 sm:p-0"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: idx === currentSlide ? 1 : 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <img
-                  src={slide}
-                  alt={`Slide ${idx + 1}`}
-                  className="w-full h-full object-contain sm:object-cover object-center"
-                  loading="lazy"
-                />
-              </motion.div>
-            ))}
-
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-
-            {/* Navigation Dots */}
-            <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1.5 sm:gap-2 z-10">
-              {slides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`h-1.5 sm:h-2 rounded-full transition-all ${
-                    idx === currentSlide
-                      ? 'bg-white w-6 sm:w-8'
-                      : 'bg-white/50 w-1.5 sm:w-2 hover:bg-white/75'
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Trust badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-12 grid grid-cols-3 gap-6 text-center"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-row flex-wrap items-center gap-6 md:gap-10 mt-6 pt-2"
           >
-            <div>
-              <div className="text-3xl font-bold text-green-400">100%</div>
-              <p className="text-slate-500 text-sm">Kepuasan Pelanggan</p>
+            <div className="flex items-center gap-3">
+              <div className="text-[#0e5bc5]">
+                <Clock className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[13px] font-bold text-slate-800 leading-snug">24 Jam</span>
+                <span className="text-[12px] text-slate-500 font-medium">Siap Melayani</span>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-green-400">10+</div>
-              <p className="text-slate-500 text-sm">Tahun Pengalaman</p>
+            
+            <div className="flex items-center gap-3">
+              <div className="text-[#0e5bc5]">
+                <Users className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[13px] font-bold text-slate-800 leading-snug">Tim Profesional</span>
+                <span className="text-[12px] text-slate-500 font-medium">&amp; Berpengalaman</span>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-green-400">1000+</div>
-              <p className="text-slate-500 text-sm">Pelanggan Puas</p>
+            
+            <div className="flex items-center gap-3">
+              <div className="text-[#0e5bc5]">
+                <Shield className="w-8 h-8" strokeWidth={1.5} />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[13px] font-bold text-slate-800 leading-snug">Peralatan Modern</span>
+                <span className="text-[12px] text-slate-500 font-medium">&amp; Higienis</span>
+              </div>
             </div>
           </motion.div>
         </div>

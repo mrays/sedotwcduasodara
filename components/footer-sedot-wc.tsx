@@ -28,7 +28,7 @@ const FooterSedotWC = () => {
           >
             <div className="mb-4">
               <h2 className="text-2xl font-bold text-slate-900">
-                Dua Sodara
+                Bebas Mampet
               </h2>
               <p className="text-sm text-slate-500 mt-1">Sedot WC</p>
             </div>

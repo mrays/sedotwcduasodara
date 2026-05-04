@@ -7,7 +7,7 @@ import { siteConfig } from '@/config/site';
 const FloatingWhatsApp = () => {
   const handleClick = () => {
     window.open(
-      `${siteConfig.links.whatsapp}&text=${encodeURIComponent('Halo Dua Sodara Sedot WC')}`,
+      `${siteConfig.links.whatsapp}&text=${encodeURIComponent('Halo Bebas Mampet Sedot WC')}`,
       '_blank',
       'noopener,noreferrer'
     );

@@ -12,13 +12,13 @@ import '@/styles/globals.css';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Sedot WC Dua Sodara',
-    default: 'Sedot WC Dua Sodara - Layanan Profesional 24 Jam',
+    template: '%s | Sedot WC Bebas Mampet',
+    default: 'Sedot WC Bebas Mampet - Layanan Profesional 24 Jam',
   },
-  description: 'Layanan penyedotan WC profesional, cepat, dan terpercaya 24 jam. Bersih, Cepat, Profesional. Hubungi kami di 085691135601',
+  description: 'Layanan penyedotan WC profesional, cepat, dan terpercaya 24 jam. Bersih, Cepat, Profesional. Hubungi kami di 087784003407',
   keywords: 'sedot WC, sedot limbah, sedot lumpur, cuci tangki air, layanan WC Pontianak',
   openGraph: {
-    title: 'Sedot WC Dua Sodara',
+    title: 'Sedot WC Bebas Mampet',
     description: 'Layanan penyedotan WC profesional 24 jam',
     type: 'website',
   },
@@ -37,7 +37,7 @@ export default async function RootLayout({
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NDLV6X6H');`}
+})(window,document,'script','dataLayer','GTM-W4N4LKDX');`}
         </Script>
       </head>
       <body
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       >
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NDLV6X6H"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W4N4LKDX"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}

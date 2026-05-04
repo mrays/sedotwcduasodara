@@ -3,6 +3,7 @@
 import HeroNew from '@/components/hero-sedot-wc';
 import Features from '@/components/why-us';
 import Services from '@/components/services';
+import Testimonials from '@/components/testimonials';
 import Stats from '@/components/stats';
 import Gallery from '@/components/gallery';
 import CTABanner from '@/components/cta-banner';
@@ -19,6 +20,7 @@ export default function Page() {
       <HeroNew />
       <Features />
       <Services />
+      <Testimonials />
       <Stats />
       <Gallery />
       <CTABanner />
