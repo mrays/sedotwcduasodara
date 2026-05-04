@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site';
 
 const Header = () => {
   const navItems = ['Beranda', 'Layanan', 'Tentang Kami', 'Blog', 'Kontak'];
