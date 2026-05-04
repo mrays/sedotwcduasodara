@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const Gallery = () => {
   const galleryImages = [
@@ -36,7 +36,7 @@ const Gallery = () => {
     },
   ];
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -46,7 +46,7 @@ const Gallery = () => {
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, scale: 0.9, y: 20 },
     show: {
       opacity: 1,

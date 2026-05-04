@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Clock, CheckCircle, Zap, Tag } from 'lucide-react';
 
@@ -28,7 +28,7 @@ const Features = () => {
     },
   ];
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -39,7 +39,7 @@ const Features = () => {
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: {
       opacity: 1,
