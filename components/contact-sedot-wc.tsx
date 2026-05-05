@@ -38,7 +38,7 @@ const ContactSedotWC = () => {
     setIsSubmitting(true);
 
     const message = [
-      'Halo, saya ingin menggunakan layanan Sedot WC Bebas Mampet.',
+      'Halo, saya ingin menggunakan layanan Sedot WC Dua Sodara.',
       '',
       `Nama: ${formData.name}`,
       `Email: ${formData.email}`,
@@ -65,14 +65,14 @@ const ContactSedotWC = () => {
     {
       icon: Phone,
       title: 'Telepon / WhatsApp',
-      content: siteConfig.phone,
+      content: `${siteConfig.phone} / ${siteConfig.phoneSecondary}`,
       action: () => window.location.href = `tel:${siteConfig.phone}`,
     },
     {
       icon: Mail,
-      title: 'Email',
-      content: siteConfig.email,
-      action: () => window.location.href = `mailto:${siteConfig.email}`,
+      title: 'Website',
+      content: siteConfig.website,
+      action: () => window.open(siteConfig.website, '_blank', 'noopener,noreferrer'),
     },
     {
       icon: MapPin,

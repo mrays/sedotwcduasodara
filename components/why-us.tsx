@@ -65,7 +65,7 @@ const Features = () => {
             Keunggulan Kami
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mengapa Anda harus memilih Sedot WC Bebas Mampet sebagai mitra layanan Anda?
+            Mengapa Anda harus memilih Sedot WC Dua Sodara sebagai mitra layanan Anda?
           </p>
         </motion.div>
 

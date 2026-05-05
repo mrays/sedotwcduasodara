@@ -22,13 +22,13 @@ const HeroNew = () => {
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-background-baru.png"
+          src="/hero-background-kuning.png"
           alt="Armada Sedot WC"
           aria-hidden="true"
           className="w-full h-full object-cover object-[75%_center] lg:object-right"
         />
-        {/* Soft gradient to ensure text readability if the image has dark spots on the left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/95 via-blue-50/80 to-blue-50/40 sm:from-blue-50/90 sm:via-white/50 sm:to-transparent"></div>
+        {/* Soft warm gradient to keep the text readable against the image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#fff8db]/96 via-[#fff8db]/82 to-[#fff8db]/42 sm:from-[#fff8db]/92 sm:via-white/55 sm:to-transparent"></div>
       </div>
 
       {/* Content overlay */}
@@ -40,7 +40,7 @@ const HeroNew = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <span className="inline-block text-xs sm:text-sm lg:text-base font-bold text-blue-600 tracking-wider uppercase">
+            <span className="inline-block text-xs sm:text-sm lg:text-base font-bold text-amber-700 tracking-wider uppercase">
               JASA SEDOT WC PROFESIONAL
             </span>
           </motion.div>
@@ -53,7 +53,7 @@ const HeroNew = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-800 leading-[1.15]"
           >
             WC Mampet?<br />
-            <span className="text-blue-600 block mt-2">
+            <span className="text-amber-600 block mt-2">
               Kami Siap Mengatasi!
             </span>
           </motion.h1>
@@ -80,7 +80,7 @@ const HeroNew = () => {
             <a 
               id="hero-call-button"
               href={`tel:${siteConfig.phone}`}
-              className="inline-flex items-center justify-center gap-2.5 bg-[#0e5bc5] hover:bg-blue-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-blue-600/20 hover:-translate-y-1 text-base w-full sm:w-auto sm:min-w-[200px]" 
+              className="inline-flex items-center justify-center gap-2.5 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-amber-500/20 hover:-translate-y-1 text-base w-full sm:w-auto sm:min-w-[200px]" 
             >
               <Phone className="w-5 h-5 fill-current" />
               {siteConfig.phone}
@@ -90,7 +90,7 @@ const HeroNew = () => {
               href={`${siteConfig.links.whatsapp}&text=${encodeURIComponent('Halo, saya membutuhkan layanan sedot WC')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-blue-50 text-[#0e5bc5] border-2 border-blue-200 px-6 py-3.5 rounded-xl font-semibold transition-all hover:-translate-y-1 text-base w-full sm:w-auto sm:min-w-[200px]" 
+              className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-amber-50 text-amber-700 border-2 border-amber-200 px-6 py-3.5 rounded-xl font-semibold transition-all hover:-translate-y-1 text-base w-full sm:w-auto sm:min-w-[200px]" 
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -107,7 +107,7 @@ const HeroNew = () => {
             className="flex flex-row flex-wrap items-center justify-start gap-4 sm:gap-6 md:gap-10 mt-4 sm:mt-6 pt-2"
           >
             <div className="flex items-center gap-3">
-              <div className="text-[#0e5bc5]">
+              <div className="text-amber-600">
                 <Clock className="w-8 h-8" strokeWidth={1.5} />
               </div>
               <div className="flex flex-col">
@@ -117,7 +117,7 @@ const HeroNew = () => {
             </div>
             
             <div className="flex items-center gap-3">
-              <div className="text-[#0e5bc5]">
+              <div className="text-amber-600">
                 <Users className="w-8 h-8" strokeWidth={1.5} />
               </div>
               <div className="flex flex-col">
@@ -127,7 +127,7 @@ const HeroNew = () => {
             </div>
             
             <div className="flex items-center gap-3">
-              <div className="text-[#0e5bc5]">
+              <div className="text-amber-600">
                 <Shield className="w-8 h-8" strokeWidth={1.5} />
               </div>
               <div className="flex flex-col">

@@ -1,14 +1,15 @@
 export const siteConfig = {
-	name: "Sedot WC Bebas Mampet",
-	url: "https://bebasmampet.my.id",
-	ogImage: "https://bebasmampet.my.id/og.jpg",
+	name: "Sedot WC Dua Sodara",
+	url: "https://www.sedotwcduasodara.web.id/",
+	ogImage: "https://www.sedotwcduasodara.web.id/og.jpg",
 	description:
-		"Sedot WC Bebas Mampet - Layanan sedot WC profesional, cepat, dan terpercaya 24 jam setiap hari di Pontianak",
-	phone: "087784003407",
-	email: "info@bebasmampet.my.id",
+		"Sedot WC Dua Sodara - Layanan sedot WC profesional, cepat, dan terpercaya 24 jam setiap hari di Pontianak",
+	phone: "6285691135601",
+	phoneSecondary: "085691135601",
+	website: "https://www.sedotwcduasodara.web.id/",
 	address: "Melayani Jabodetabek",
 	links: {
-		whatsapp: "https://api.whatsapp.com/send?phone=6287784003407",
+		whatsapp: "https://api.whatsapp.com/send?phone=6285691135601",
 	},
 };
 

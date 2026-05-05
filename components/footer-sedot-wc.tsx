@@ -28,7 +28,7 @@ const FooterSedotWC = () => {
           >
             <div className="mb-4">
               <h2 className="text-2xl font-bold text-slate-900">
-                Bebas Mampet
+                {siteConfig.name}
               </h2>
               <p className="text-sm text-slate-500 mt-1">Sedot WC</p>
             </div>
@@ -86,14 +86,19 @@ const FooterSedotWC = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <Phone className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                <a href={`tel:${siteConfig.phone}`} className="text-slate-600 hover:text-green-600 transition-colors">
-                  {siteConfig.phone}
-                </a>
+                <div className="flex flex-col">
+                  <a href={`tel:${siteConfig.phone}`} className="text-slate-600 hover:text-green-600 transition-colors">
+                    {siteConfig.phone}
+                  </a>
+                  <a href={`tel:${siteConfig.phoneSecondary}`} className="text-slate-600 hover:text-green-600 transition-colors">
+                    {siteConfig.phoneSecondary}
+                  </a>
+                </div>
               </div>
               <div className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                <a href={`mailto:${siteConfig.email}`} className="text-slate-600 hover:text-green-600 transition-colors">
-                  {siteConfig.email}
+                <a href={siteConfig.website} target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-green-600 transition-colors break-all">
+                  {siteConfig.website}
                 </a>
               </div>
               <div className="flex items-start gap-2">
